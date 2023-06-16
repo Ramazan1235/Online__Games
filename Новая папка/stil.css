@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Глобальные стили*/
+  body {
+    font-family: Blackcrow-Bold, sans-serif;
+    line-height: 1.5;
+    color: #fff;
+    background-image: url('hero.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+  }
+  /* Шрифт*/
+  @font-face {
+    font-family: Blackcrow-Bold;
+    width: auto;
+    src: url('font/Blackcrow-Thin.ttf');
+  }
+  /* Шапка*/
+  .navbar {
+    background-color:#000000;
+    width: 100%;
+    height: 120px;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid  #5F36F0;
+  }
+  .navbar .container {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar_first{
+    margin-left: 50px;
+    margin-bottom: 10px;
+  }
+  .navbar_sec {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .navbar_sec li {
+    list-style: none;
+    display: inline-block;
+  }
+  .navbar_sec li :hover {
+    color:  #5F36F0;
+  }
+  .navbar_sec li a {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    
+  }
+
+  .navbar-wrap{
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  a {
+    color: #fff;
+    
+  }
+  
+  ul {
+    list-style: none;
+  }
+/* Тело сайта */
+  #hero {
+    background-position: center;
+    color: #fff;
+    padding: 150px 0;
+    text-align: center;
+  }
+  
+  #hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  #hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .name_hero{
+    display:inline-block;
+    position: center;
+    padding: 4px 10px;
+    background-color: #5F36F0;
+    width: 650px;
+    height: 65px;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+  }
+  .name_hero:hover{
+    background-color: #000;
+  }
+  /* фото с анимацией */
+.hero3count {
+  max-width: 1000px;
+  height:650px;
+  width: 100%;
+  
+  position: center;
+  top:0; right: 0; left: 0; bottom: 0;
+  margin: auto;
+  
+  background: url("hero3.jpg");
+  background-color: black;
+  background-size: cover;
+  cursor: pointer;
+  
+  -webkit-box-shadow: 0 0 5px #000;
+        box-shadow: 0 0 5px #000;
+  }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  
+  background: rgba(39, 37, 37, 0.9);
+  opacity: 0;
+  transition: all 0.5s;
+  
+  font-family: 'Blackcrow-Bold', serif;
+}
+
+
+.items {
+  padding-left: 20px;
+  letter-spacing: 3px;
+}
+
+.head {
+  font-size: 30px;
+  line-height: 40px;
+  
+  transform: translateY(40px);
+  transition: all 0.7s;
+}
+
+.price {
+  padding-bottom: 100px;
+  margin: 20px;
+  font-size: 20px;
+  line-height: 50px;  
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s;
+  .old {
+    font-family: 'Blackcrow-Bold', serif;
+    text-decoration: none;
+    color: lighten(rgb(41, 39, 39),40%);
+
+  }
+}
+
+.container:hover .overlay {
+  opacity: 1;
+  & .head {
+    transform: translateY(0px);
+  }
+  
+  & hr {
+    width: 950px;
+    transition-delay: 0.4s;
+  }
+  
+  & .price {
+    transform: translateY(0px);
+    transition-delay: 0.3s;
+    opacity: 1;
+  }
+  
+  & .cart {
+    transform: translateY(0px);
+    transition-delay: 0.6s;
+    opacity: 1;
+  }
+}
+/* кнопки */
+  .btn {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #5F36F0;
+    color: #fff;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #000000;
+  }
+  
+
+  .name_hero2{
+      display:inline-block;
+      text-align: center;
+      padding: 4px 10px;
+      background-color: #5F36F0;
+      width: 400px;
+      height: 50px;
+      color: #fff;
+      text-align: center;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-bottom: 10px;
+  }
+  .name_hero2:hover{
+    background-color: #000;
+  }
+
+
+  #popular-games {
+    padding: 10px 0;
+    text-align: center;
+  }
+  .game .imgame{
+    padding: 10px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50px;
+  }
+  .game .imgame:hover{
+    /* transform: scale(1.02); */
+    transform:scale(1.02);
+    cursor: pointer;
+  }
+  .game .imgtext{
+      text-align: center;
+      /* max-width: 1300px; */
+      align-items: center;
+      margin: 0 100px;
+      background-color: #000000;
+      border-radius: 30px;
+      opacity: 0.8;
+      cursor: pointer;
+
+  }
+  
+  /* Footer */
+  footer {
+    background-color:#5F36F0;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+    border-top: 2px solid #000000;
+  }
+ 
+  
